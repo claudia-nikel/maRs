@@ -1,5 +1,5 @@
 ## NASA API Mars Weather Report
-## KT Hobbs & Claudia Nickel
+## KT Hobbs & Claudia Nikel & Shreeram Murali
 
 #-------------------------------
 #### Import libraries and data
@@ -10,63 +10,81 @@ library('purrr')
 library('dplyr')
 library('tidyr')
 library('plotly')
-library('dplyr')
 
-
-api <- "hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"
-
-
-req <- paste("https://api.nasa.gov/insight_weather/?api_key=", api, "&feedtype=json&ver=1.0", sep = "")
-mars <- fromJSON(req)
-
-mars.df <- map(mars[1:7], ~unlist(.x[1:6]) %>%
+space_data<-function(APIkey){
+  req <- paste("https://api.nasa.gov/insight_weather/?api_key=", as.character(APIkey), "&feedtype=json&ver=1.0", sep = "")
+  mars <- fromJSON(req)
+  
+  mars<-(map(mars[1:7], ~unlist(.x[1:6]) %>%
       bind_rows) %>%
-  bind_rows(.id = "day") %>%
-  pivot_longer(cols = grep("\\.", names(.)), names_sep = "\\.", names_to = c(".value", "var"))
+    bind_rows(.id = "day") %>%
+    pivot_longer(cols = grep("\\.", names(.)), names_sep = "\\.", names_to = c(".value", "var")))
+
+  mars.av <- subset(mars, var == 'av')
+  
+  trace_0 <- mars.av$AT
+  trace_1 <- mars.av$HWS
+  trace_2 <- mars.av$PRE
+  x <- mars.av$day
+  data <- data.frame(x, trace_0, trace_1, trace_2)
+  
+  p <- plot_ly(data, x = ~x, y = ~trace_0, name = 'Atmospheric Temperature', type = 'scatter', mode = 'lines+markers') %>%
+    add_trace(y = ~trace_1, name = 'Horizontal Wind Speed', mode = 'lines+markers') %>%
+    add_trace(y = ~trace_2, name = 'Atmospheric Pressure', mode = 'lines+markers') %>%
+    layout(title = "Weekly Weather Summary on Mars", xaxis = list(title = "Days"), yaxis = list(title = " "))
+  
+  p
+  
 
 
+}
+
+space_data("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
+mars.df<-space_data("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
+
+########################
 # plot windspeeds for one sol
 # NOTE: need to figure out how to raise exception for the first sol (can't plot the sol before it)
 
 windspeed <- function(sol){
   
-    # average
-    refsol <- as.character(as.numeric(sol)-1)
-    sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
-    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$HWS
+  # average
+  refsol <- as.character(as.numeric(sol)-1)
+  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
+  ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$HWS
   
-    
-    # max
-    sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$HWS
-    
-    
-    # min
-    sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$HWS
-    
   
-    p <- plot_ly(
-      domain = list(x = c(0, 1), y = c(0, 1)),
-      value = sol.av,
-      delta = list(reference = ref.av),
-      title = list(text = paste("Wind Speeds for Sol", sol, sep = " ")),
-      type = "indicator",
-      mode = "gauge+number+delta",
-      gauge = list(
-        bar = list(color = "royalblue"),
-        bgcolor = "white",
-        borderwidth = 2,
-        bordercolor = "gray",
-        threshold = list(
-          line = list(color = "red", width = 4),
-          thickness = 0.75,
-          value = sol.mx),
-        threshold = list(
-          line = list(color = "green", width = 4),
-          thickness = 0.75,
-          value = sol.mn)
-      )) %>%
-      layout(margin = list(l=15,r=30))
-
+  # max
+  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$HWS
+  
+  
+  # min
+  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$HWS
+  
+  
+  p <- plot_ly(
+    domain = list(x = c(0, 1), y = c(0, 1)),
+    value = sol.av,
+    delta = list(reference = ref.av),
+    title = list(text = paste("Wind Speeds for Sol", sol, sep = " ")),
+    type = "indicator",
+    mode = "gauge+number+delta",
+    gauge = list(
+      bar = list(color = "royalblue"),
+      bgcolor = "white",
+      borderwidth = 2,
+      bordercolor = "gray",
+      threshold = list(
+        line = list(color = "red", width = 4),
+        thickness = 0.75,
+        value = sol.mx),
+      threshold = list(
+        line = list(color = "green", width = 4),
+        thickness = 0.75,
+        value = sol.mn)
+    )) %>%
+    layout(margin = list(l=15,r=30))
+  
 }
 
 p <- windspeed(404)
