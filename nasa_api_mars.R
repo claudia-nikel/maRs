@@ -31,11 +31,10 @@ space_data<-function(APIkey){
   p <- plot_ly(data, x = ~x, y = ~trace_0, name = 'Atmospheric Temperature', type = 'scatter', mode = 'lines+markers') %>%
     add_trace(y = ~trace_1, name = 'Horizontal Wind Speed', mode = 'lines+markers') %>%
     add_trace(y = ~trace_2, name = 'Atmospheric Pressure', mode = 'lines+markers') %>%
-    layout(title = "Weekly Weather Summary on Mars", xaxis = list(title = "Days"), yaxis = list(title = " "))
+    layout(title = "Weekly Weather Summary on Mars", xaxis = list(title = "Sol"), yaxis = list(title = " "))
   
   p
   
-
 
 }
 

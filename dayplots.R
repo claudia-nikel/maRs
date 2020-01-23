@@ -196,7 +196,7 @@ temperature <- function(sol){
   
   # average
   sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$AT
-  
+
   # max
   sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$AT
   
@@ -207,7 +207,6 @@ temperature <- function(sol){
   sol.av <- (as.numeric(sol.av) - 32) * 5/9
   sol.mx <- (as.numeric(sol.mx) - 32) * 5/9
   sol.mn <- (as.numeric(sol.mn) - 32) * 5/9
-  
   
   # list of sols to filter plots by
   listofsols <- list()
@@ -271,4 +270,7 @@ temperature <- function(sol){
 
 t <- temperature(405)
 t
+
+a <- subplot(w,p, nrows = 3, margin = 0.05, shareX = TRUE)
+a
 
