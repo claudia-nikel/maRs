@@ -26,59 +26,252 @@ mars.df <- map(mars[1:7], ~unlist(.x[1:6]) %>%
 
 
 # plot windspeeds for one sol
-# NOTE: need to figure out how to raise exception for the first sol (can't plot the sol before it)
+# black bar is the average, corresponding to the black text
+# green background is the sol's range (min and max)
+# red or green text below is relative to the previous sol's average
 
 windspeed <- function(sol){
   
     # average
-    refsol <- as.character(as.numeric(sol)-1)
     sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
-    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$HWS
-  
     
     # max
     sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$HWS
     
-    
     # min
     sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$HWS
     
+    # list of sols to filter plots by
+    listofsols <- list()
+    for (i in 1:7) {
+      listofsols[i] <- as.numeric(unique(mars.df$day))[i]
+    }
+    listofsols
+    
+    
+    
+    if (length(subset(mars.df$day, mars.df$day == as.numeric(sol)-1) != 0)) {
+    # reference sol, the day before
+      refsol <- as.character(as.numeric(sol)-1)
+      ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$HWS
+    
+      p <- plot_ly(
+        domain = list(x = c(0, 1), y = c(0, 1)),
+        value = sol.av,
+        delta = list(reference = ref.av),
+        title = list(text = paste("Horizontal Wind Speeds (m/s) \n for Sol", sol, sep = " "), font = list(size = 20)),
+        type = "indicator",
+        mode = "gauge+number+delta",
+        gauge = list(
+          axis = list(range = list(NULL, 25), tickwidth = 1),
+          bar = list(color = "darkgreen"),
+          bgcolor = "white",
+          steps = list(
+            list(range = c(sol.mn, sol.mx), color = "lightgreen")),
+          threshold = list(
+            line = list(color = "black", width = 1),
+            thickness = 0.75,
+            value = sol.av)
+        )) %>%
+        layout(margin = list(l=15,r=30))
+      
+    } else if (listofsols[1] == as.numeric(sol)) {
+      
+      p <- plot_ly(
+        domain = list(x = c(0, 1), y = c(0, 1)),
+        value = sol.av,
+        title = list(text = paste("Horizontal Wind Speeds (m/s) \n for Sol", sol, sep = " "), font = list(size = 20)),
+        type = "indicator",
+        mode = "gauge+number",
+        gauge = list(
+          axis = list(range = list(NULL, 25), tickwidth = 1),
+          bar = list(color = "darkgreen"),
+          bgcolor = "white",
+          steps = list(
+            list(range = c(sol.mn, sol.mx), color = "lightgreen")),
+          threshold = list(
+            line = list(color = "black", width = 1),
+            thickness = 0.75,
+            value = sol.av)
+        )
+        ) %>%
+        layout(margin = list(l=15,r=30))
+      
+    } else {
+      listofsols <- list(as.numeric(unique(mars.df$day)))
+      print(c("Please select one of the sol numbers from the last seven sols: " = listofsols))
+    }
+}
+
+w <- windspeed(407)
+w
+
+
+
+# plot pressure for one sol
+# black bar is the average, corresponding to the black text
+# orange background is the sol's range (min and max)
+# red or green text below is relative to the previous sol's average
+
+pressure <- function(sol){
   
+  # average
+  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$PRE
+  
+  # max
+  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$PRE
+ 
+  # min
+  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$PRE
+  
+  # list of sols to filter plots by
+  listofsols <- list()
+  for (i in 1:7) {
+    listofsols[i] <- as.numeric(unique(mars.df$day))[i]
+  }
+  listofsols
+  
+  
+  
+  if (length(subset(mars.df$day, mars.df$day == as.numeric(sol)-1) != 0)) {
+    # reference sol, the day before
+    refsol <- as.character(as.numeric(sol)-1)
+    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$PRE
+    
     p <- plot_ly(
       domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
       delta = list(reference = ref.av),
-      title = list(text = paste("Wind Speeds for Sol", sol, sep = " ")),
+      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number+delta",
       gauge = list(
-        bar = list(color = "royalblue"),
+        axis = list(range = list(NULL, 700), tickwidth = 1),
+        bar = list(color = "#E6843E"),
         bgcolor = "white",
-        borderwidth = 2,
-        bordercolor = "gray",
+        steps = list(
+          list(range = c(sol.mn, sol.mx), color = "#EEE0D6")),
         threshold = list(
-          line = list(color = "red", width = 4),
+          line = list(color = "black", width = 1),
           thickness = 0.75,
-          value = sol.mx),
-        threshold = list(
-          line = list(color = "green", width = 4),
-          thickness = 0.75,
-          value = sol.mn)
+          value = sol.av)
       )) %>%
       layout(margin = list(l=15,r=30))
-
+    
+  } else if (listofsols[1] == as.numeric(sol)) {
+    
+    p <- plot_ly(
+      domain = list(x = c(0, 1), y = c(0, 1)),
+      value = sol.av,
+      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
+      type = "indicator",
+      mode = "gauge+number",
+      gauge = list(
+        axis = list(range = list(NULL, 700), tickwidth = 1),
+        bar = list(color = "#E6843E"),
+        bgcolor = "white",
+        steps = list(
+          list(range = c(sol.mn, sol.mx), color = "#EEE0D6")),
+        threshold = list(
+          line = list(color = "black", width = 1),
+          thickness = 0.75,
+          value = sol.av)
+      )
+    ) %>%
+      layout(margin = list(l=15,r=30))
+    
+  } else {
+    listofsols <- list(as.numeric(unique(mars.df$day)))
+    print(c("Please select one of the sol numbers from the last seven sols: " = listofsols))
+  }
 }
 
-p <- windspeed(404)
+p <- pressure(408)
 p
 
 
-# grab only the average windspeeds for each day
-mars.av <- subset(mars.df, var == 'av')
-weekly.av <- mean(as.numeric(mars.av$HWS))
 
-mars.mn <- subset(mars.df, var == 'mn')
-weekly.min <- min(as.numeric(mars.mn$HWS))
+# plot atmospheric temp for one sol
+# black bar is the average, corresponding to the black text
+# blue background is the sol's range (min and max)
+# red or green text below is relative to the previous sol's average
 
-mars.mx <- subset(mars.df, var == 'mx')
-weekly.max <- max(as.numeric(mars.mx$HWS))
+temperature <- function(sol){
+  
+  # average
+  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$AT
+  
+  # max
+  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$AT
+  
+  # min
+  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$AT
+  
+  # convert farhenheit to celsius
+  sol.av <- (as.numeric(sol.av) - 32) * 5/9
+  sol.mx <- (as.numeric(sol.mx) - 32) * 5/9
+  sol.mn <- (as.numeric(sol.mn) - 32) * 5/9
+  
+  
+  # list of sols to filter plots by
+  listofsols <- list()
+  for (i in 1:7) {
+    listofsols[i] <- as.numeric(unique(mars.df$day))[i]
+  }
+  listofsols
+  
+  
+  
+  if (length(subset(mars.df$day, mars.df$day == as.numeric(sol)-1) != 0)) {
+    # reference sol, the day before
+    refsol <- as.character(as.numeric(sol)-1)
+    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$AT
+    
+    p <- plot_ly(
+      value = sol.av,
+      delta = list(reference = ref.av),
+      title = list(text = paste("Atmospheric Temperature (°C) \n for Sol", sol, sep = " "), font = list(size = 20)),
+      type = "indicator",
+      mode = "gauge+number+delta",
+      gauge = list(
+        axis = list(range = list(NULL, 700), tickwidth = 1),
+        bar = list(color = "royalblue"),
+        bgcolor = "white",
+        steps = list(
+          list(range = c(sol.mn, sol.mx), color = "#E0E6F2")),
+        threshold = list(
+          line = list(color = "black", width = 1),
+          thickness = 0.75,
+          value = sol.av)
+      )) %>%
+      layout(margin = list(l=15,r=30))
+    
+  } else if (listofsols[1] == as.numeric(sol)) {
+    
+    p <- plot_ly(
+      value = sol.av,
+      title = list(text = paste("Atmospheric Temperature (°C) \n for Sol", sol, sep = " "), font = list(size = 20)),
+      type = "indicator",
+      mode = "gauge+number",
+      gauge = list(
+        axis = list(range = list(-100, 0), tickwidth = 1),
+        bar = list(color = "royalblue"),
+        bgcolor = "white",
+        steps = list(
+          list(range = c(sol.mn, sol.mx), color = "#E0E6F2")),
+        threshold = list(
+          line = list(color = "black", width = 1),
+          thickness = 0.75,
+          value = sol.av)
+      )
+    ) %>%
+      layout(margin = list(l=15,r=30))
+    
+  } else {
+    listofsols <- list(as.numeric(unique(mars.df$day)))
+    print(c("Please select one of the sol numbers from the last seven sols: " = listofsols))
+  }
+}
+
+t <- temperature(405)
+t
