@@ -2,9 +2,9 @@ source("../nasa_api_mars.R") #only need if testing in this script
 library(testthat)
 
 test_that("practice", {
-  expect_error(space_data("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOhVw6GxS"))
-})
+  expect_error(space_data("h"))
+})        
 
 
-#to test in R console use:
-#testthat::test_dir(“tests”) 
+#to test if OK or Failed:
+test_file("test_space_data_Function.R")
