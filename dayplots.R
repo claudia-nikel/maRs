@@ -103,7 +103,7 @@ windspeed <- function(sol){
   }
 }
 
-w <- windspeed(407)
+w <- windspeed(412)
 w
 
 
@@ -184,7 +184,7 @@ pressure <- function(sol){
   }
 }
 
-p <- pressure(408)
+p <- pressure(412)
 p
 
 # plot atmospheric temp for one sol
