@@ -4,6 +4,8 @@
 
 **Contributors:** Claudia Nikel, KT Hobbs & Shreeram Murali
 
+# NASA Mars API
+To retrieve and visualize weather data from the last 7 sols (martian days) on mars.
 
 # Installation:
 clone repository
