@@ -12,6 +12,8 @@ clone repository
 
 in command line:
 
+`R CMD build maRs`
+
 `R CMD INSTALL maRs_0.1.tar.gz`
 
 in R console:
