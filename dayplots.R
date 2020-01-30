@@ -268,9 +268,6 @@ temperature <- function(sol){
   }
 }
 
-t <- temperature(405)
+t <- temperature(411)
 t
-
-a <- subplot(w,p, nrows = 3, margin = 0.05, shareX = TRUE)
-a
 

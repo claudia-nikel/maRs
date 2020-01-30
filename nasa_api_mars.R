@@ -41,4 +41,5 @@ space_data<-function(APIkey){
 space_data("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
 mars.df<-space_data("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
 
+
 ########################
