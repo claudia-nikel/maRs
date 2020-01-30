@@ -2,25 +2,6 @@
 # TEMPERATURE PLOT
 ####################
 
-library('jsonlite')
-library('purrr')
-library('dplyr')
-library('tidyr')
-library('plotly')
-library('dplyr')
-
-
-api <- "hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"
-
-
-req <- paste("https://api.nasa.gov/insight_weather/?api_key=", api, "&feedtype=json&ver=1.0", sep = "")
-mars <- fromJSON(req)
-
-mars.df <- map(mars[1:7], ~unlist(.x[1:6]) %>%
-                 bind_rows) %>%
-  bind_rows(.id = "day") %>%
-  pivot_longer(cols = grep("\\.", names(.)), names_sep = "\\.", names_to = c(".value", "var"))
-
 # plot atmospheric temp for one sol
 # black bar is the average, corresponding to the black text
 # blue background is the sol's range (min and max)
@@ -43,6 +24,7 @@ temperature <- function(sol){
   sol.mn <- (as.numeric(sol.mn) - 32) * 5/9
   
   # list of sols to filter plots by
+  # testing that the correct sol was chosen
   listofsols <- list()
   for (i in 1:7) {
     listofsols[i] <- as.numeric(unique(mars.df$day))[i]
