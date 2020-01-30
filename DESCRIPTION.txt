@@ -1,2 +1,2 @@
-Package: NASA Mars API
+Package: maRs
 Version: 0.1
