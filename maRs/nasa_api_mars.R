@@ -5,13 +5,15 @@
 #### Import libraries and data
 #-------------------------------
 
-library('jsonlite')
-library('purrr')
-library('dplyr')
-library('tidyr')
-library('plotly')
+
 
 space_data<-function(APIkey){
+  
+  library('jsonlite')
+  library('purrr')
+  library('dplyr')
+  library('tidyr')
+  library('plotly')
   req <- paste("https://api.nasa.gov/insight_weather/?api_key=", as.character(APIkey), "&feedtype=json&ver=1.0", sep = "")
   mars <- fromJSON(req)
   
