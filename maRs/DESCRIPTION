@@ -5,6 +5,10 @@ Title: NASA Mars API
 Description: data wrangling and plotting of temperature, wind, pressure for sols.
 Authors: KT Hobbs <kthobbs@mail.ubc.ca>, Claudia Nikel, Shreeram Murali
 Maintainer: KT Hobbs <kthobbs@mail.ubc.ca>
-
-Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
+Imports:
+	jsonlite,
+	purrr,
+	dplyr,
+	tidyr,
+	plotly
