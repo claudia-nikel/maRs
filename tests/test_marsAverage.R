@@ -1,10 +1,6 @@
 source("../maRs/marsAverage.R") #only need if testing in this script
 library(testthat)
 
-test_that("invalid API key", {
-  expect_error(marsInfo("h"))
-})     
-
 test_that("data types correct", {
   s<-marsAverage(x, graph=NULL)
   expect_is(typeof(s),'character')
