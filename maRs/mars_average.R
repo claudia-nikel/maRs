@@ -21,7 +21,7 @@ library('plotly')
 #where green is pressure, orange is wind speed 
 #and blue is temperature
 
-mars_average<-function(mars.df, graph=NULL){
+marsAverage<-function(mars.df, graph=NULL){
   
   
   #takes on subset of df with averages
@@ -51,4 +51,4 @@ mars_average<-function(mars.df, graph=NULL){
   
 }
 
-mars_average(x, graph=NULL)
+marsAverage(x, graph=NULL)
