@@ -1,5 +1,5 @@
 ## NASA API Mars Weather Report
-## KT Hobbs & Claudia Nickel & Shreeram
+## KT Hobbs & Claudia Nikel & Shreeram
 
 # plot windspeeds for one sol
 # black bar is the average, corresponding to the black text
