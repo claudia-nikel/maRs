@@ -21,7 +21,7 @@ library('plotly')
 # blue background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-temperature <- function(sol){
+temperature <- function(sol, mars.df){
   
   # average
   sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$AT
@@ -98,6 +98,6 @@ temperature <- function(sol){
   }
 }
 
-t <- temperature(411)
+t<-temperature(413,x)
 t
 

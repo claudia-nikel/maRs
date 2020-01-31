@@ -20,7 +20,7 @@ library('plotly')
 # orange background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-pressure <- function(sol){
+pressure <- function(sol, mars.df){
   
   # average
   sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$PRE
@@ -93,5 +93,5 @@ pressure <- function(sol){
   }
 }
 
-p <- pressure(412)
+p <- pressure(412,x)
 p

@@ -20,7 +20,7 @@ library('plotly')
 # green background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-windspeed <- function(sol){
+windspeed <- function(sol, mars.df){
   
   # average
   sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
@@ -94,5 +94,5 @@ windspeed <- function(sol){
   }
 }
 
-w <- windspeed(412)
+w<-windspeed(413,x)
 w
