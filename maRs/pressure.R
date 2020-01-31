@@ -1,6 +1,19 @@
-####################
-# PRESSURE PLOT
-####################
+## NASA API Mars Weather Report- Pressure Function
+## KT Hobbs & Claudia Nikel & Shreeram Murali
+
+#-------------------------------
+#### Import libraries and data
+#-------------------------------
+
+library('jsonlite')
+library('purrr')
+library('dplyr')
+library('tidyr')
+library('plotly')
+
+#-------------------------------
+#### Description
+#-------------------------------
 
 # plot pressure for one sol
 # black bar is the average, corresponding to the black text

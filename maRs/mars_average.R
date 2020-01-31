@@ -5,11 +5,21 @@
 #### Import libraries and data
 #-------------------------------
 
+
 library('jsonlite')
 library('purrr')
 library('dplyr')
 library('tidyr')
 library('plotly')
+
+#-------------------------------
+#### Description
+#-------------------------------
+
+#return df of weekly weather summary on mars
+#plots stacked line graph if specified in argument
+#where green is pressure, orange is wind speed 
+#and blue is temperature
 
 mars_average<-function(mars.df, graph=NULL){
   

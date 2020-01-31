@@ -1,5 +1,19 @@
 ## NASA API Mars Weather Report
-## KT Hobbs & Claudia Nikel & Shreeram
+## KT Hobbs & Claudia Nikel & Shreeram Murali
+
+#-------------------------------
+#### Import libraries and data
+#-------------------------------
+
+library('jsonlite')
+library('purrr')
+library('dplyr')
+library('tidyr')
+library('plotly')
+
+#-------------------------------
+#### Description
+#-------------------------------
 
 # plot windspeeds for one sol
 # black bar is the average, corresponding to the black text

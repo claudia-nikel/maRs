@@ -11,6 +11,13 @@ library('dplyr')
 library('tidyr')
 library('plotly')
 
+#-------------------------------
+#### Description
+#-------------------------------
+#gets api from NASA for mars and returns
+#a dataframe with information on the past
+#seven days
+
 marsInfo<-function(APIkey){
   req<-paste("https://api.nasa.gov/insight_weather/?api_key=", as.character(APIkey), "&feedtype=json&ver=1.0", sep = "")
   mars<-fromJSON(req)
