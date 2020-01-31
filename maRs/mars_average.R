@@ -1,4 +1,4 @@
-## NASA API Mars Weather Report
+## NASA API Mars Weather Report-Average Weather Function
 ## KT Hobbs & Claudia Nikel & Shreeram Murali
 
 #-------------------------------

@@ -1,4 +1,4 @@
-## NASA API Mars Weather Report
+## NASA API Mars Weather Report-Get API Function
 ## KT Hobbs & Claudia Nikel & Shreeram Murali
 
 #-------------------------------
@@ -14,7 +14,7 @@ library('plotly')
 #-------------------------------
 #### Description
 #-------------------------------
-#gets api from NASA for mars and returns
+#gets API from NASA for mars and returns
 #a dataframe with information on the past
 #seven days
 

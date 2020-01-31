@@ -1,4 +1,4 @@
-## NASA API Mars Weather Report- Pressure Function
+## NASA API Mars Weather Report-Pressure Function
 ## KT Hobbs & Claudia Nikel & Shreeram Murali
 
 #-------------------------------
