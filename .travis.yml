@@ -1,3 +1,10 @@
+before_install:
+  - cd ./maRs
+  - npm install
+  - npm test 
+  - npm run build
+
+
 language: r
 cache: packages
 warnings_are_errors: true
