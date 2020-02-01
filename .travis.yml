@@ -15,6 +15,10 @@ notifications:
 # for codecov
 r_packages:
   - covr
+  - devtools
+  
+
+sudo: required
 
 # only report coverage after build is successful
 after_success:
@@ -27,3 +31,9 @@ os:
 jobs:
   allow_failures:
     - os: osx
+    
+r_github_packages:
+  - codecov/maRs
+
+after_success:
+  - Rscript -e 'library(covr);codecov()'
