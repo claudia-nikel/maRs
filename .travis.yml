@@ -28,7 +28,7 @@ jobs:
     - os: osx
     
 r_github_packages:
-  - codecov/maRs
+  - codecov/534_project
 
 script: test-all.R
 
