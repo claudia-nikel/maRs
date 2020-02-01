@@ -1,4 +1,4 @@
-source("../maRs/marsAverage.R") #only need if testing in this script
+context("marsAverage.R") #only need if testing in this script
 library(testthat)
 
 test_that("data types correct", {

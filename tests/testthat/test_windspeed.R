@@ -1,4 +1,4 @@
-source("../maRs/windspeede.R") #only need if testing in this script
+context("windspeed.R") #only need if testing in this script
 library(testthat)
 
 test_that("data types correct", {

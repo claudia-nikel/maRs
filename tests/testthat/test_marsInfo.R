@@ -1,4 +1,4 @@
-source("../maRs/marsInfo.R") #only need if testing in this script
+context("marsInfo.R") #only need if testing in this script
 library(testthat)
 
 test_that("invalid API key", {
