@@ -1,12 +1,13 @@
 Package: maRs
-Title: Pull weather data from the last seven days
-Version: 0.2.0.9000
-Description: Interact with Google Sheets from R.
+Title: NASA API Mars Weather Report
+Version: 0
+Description: Gather weekly weather reports and plot specifics from the last seven days.
 Authors@R: c(
-    person("Jennifer", "Bryan", , "jenny@stat.ubc.ca", c("aut", "cre")),
-    person("Joanna", "Zhao", , "joanna.zhao@alumni.ubc.ca", role = "aut")
+    person("Claudia", "Nikel"),
+    person("KT", "Hobbs"),
+    person("Shreeram", "Murali")
     )
-URL: 
+URL: https://github.com/claudia-nikel/534_project/tree/master
 BugReports: 
 Depends:
     R (>= 3.2.0)
@@ -17,6 +18,7 @@ Imports:
     dplyr (>= 0.4.2),
     httr (>= 1.1.0),
     jsonlite,
+    plotly,
     purrr,
     readr (>= 0.2.2),
     stats,
