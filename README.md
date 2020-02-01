@@ -28,22 +28,29 @@ in R console:
 
 # Functions
 
-`windspeed`: visualizes the inputted sol's windspeed (m/s) as a dial. The black bar is the average windspeed for the sol, which corresponds to the black text. The green background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
+`windspeed`: retrieves the inputted sol's horizontal wind speed (m/s) from the summary table and visualizes it as a dial. The black bar is the average windspeed for the sol, which corresponds to the black text. The green background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
 
-`pressure`: visualizes the inputted sol's pressure (Pascals) as a dial. The black bar is the average pressure for the sol, which corresponds to the black text. The orange background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
+`pressure`: retrieves the inputted sol's pressure (Pascal) from the summary table and visualizes it as a dial. The black bar is the average pressure for the sol, which corresponds to the black text. The orange background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
-`temperature`: visualizes the inputted sol's pressure (converted from Farhenheit to degrees Celsius) as a dial. The black bar is the average pressure for the sol, which corresponds to the black text. The blue background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
+`temperature`: retrieves the inputted sol's temperature (converted from Farhenheit to degrees Celsius) from the summary table and visualizes it as a dial. The black bar is the average pressure for the sol, which corresponds to the black text. The blue background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
 
 # Input
-For windspeed, pressure, and temperature visualizations, user must input a sol number from the previous 7 sols (e.g. windspeed(417)).
+
+## Summary Table 
+
+
+## Visualizations
+For windspeed, pressure, and temperature visualizations, user must input a sol number from the previous 7 sols 
+
+`windspeed(417)`
 
 If the input is not within the last 7 sols, an error message will return listing valid options.
 
 
 # Output
 
-`windspeed(417)`
 
-![windspeed_example](images/windspeed.png)
+
+![windspeed_example](images/windspeed.png =100x20)
