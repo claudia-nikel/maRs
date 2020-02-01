@@ -44,3 +44,4 @@ Remotes:
     hadley/testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
+
