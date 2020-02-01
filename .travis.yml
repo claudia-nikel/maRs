@@ -1,5 +1,5 @@
 language: r
-cache: packages
+cache: maRs
 warnings_are_errors: false
 
 r:
