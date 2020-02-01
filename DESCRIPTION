@@ -1,4 +1,4 @@
-Package: 534_project
+Package: maRs
 Title: NASA Mars API
 Version: 1.0
 Description: Data wrangling and plotting of temperature, wind, pressure for sols.
