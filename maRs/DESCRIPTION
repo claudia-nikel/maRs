@@ -3,14 +3,14 @@ Title: NASA Mars API
 Version: 0.1
 Description: Data wrangling and plotting of temperature, wind, pressure for sols.
 Authors@R: c(
-    person("Claudia", "Nikel", role = c("aut"),
-        email = "myrmecocystus@gmail.com",
+    person("Claudia", "Nikel", role ="aut",
+        email = "claudia.nikel@gmail.com",
         comment = "testing"),
-    person("KT", "Hobbs", role = "aut",
-        email = "andy.teucher@gmail.com"),
-    person("Tom", "MacWright", role = "cph",
-        comment = "functions & vignette"),
+    person("KT", "Hobbs", role = "crew",
+        email = "andy.teucher@gmail.com",
+        comment = "functions"),
     person("Shreeram", "Musali", role = "cph",
+        email = "andy.teucher@gmail.com",
         comment = "functions")
     )
 URL: https://github.com/claudia-nikel/534_project
