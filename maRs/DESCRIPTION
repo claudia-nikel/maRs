@@ -4,14 +4,11 @@ Version: 0.1
 Description: Data wrangling and plotting of temperature, wind, pressure for sols.
 Authors@R: c(
     person("Claudia", "Nikel", role ="aut",
-        email = "claudia.nikel@gmail.com",
-        comment = "testing"),
-    person("KT", "Hobbs", role = "crew",
-        email = "andy.teucher@gmail.com",
-        comment = "functions"),
-    person("Shreeram", "Musali", role = "cph",
-        email = "andy.teucher@gmail.com",
-        comment = "functions")
+        email = "claudia.nikel@gmail.com",),
+    person("KT", "Hobbs", role = "cre",
+        email = "andy.teucher@gmail.com"),
+    person("Shreeram", "Musali", role = "ctb",
+        email = "andy.teucher@gmail.com")
     )
 URL: https://github.com/claudia-nikel/534_project
 BugReports: 
