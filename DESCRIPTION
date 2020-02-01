@@ -1,0 +1,46 @@
+Package: 534_project
+Title: NASA Mars API
+Version: 1.0
+Description: Data wrangling and plotting of temperature, wind, pressure for sols.
+Authors@R: c(
+    person("Claudia", "Nikel", role ="aut",
+        email = "claudia.nikel@gmail.com",),
+    person("KT", "Hobbs", role = "cre",
+        email = "andy.teucher@gmail.com"),
+    person("Shreeram", "Musali", role = "ctb",
+        email = "andy.teucher@gmail.com")
+    )
+Author: Claudia Nikel [aut], 
+    KT Hobbs [cre],
+    Shreeram Musali [ctb]
+Maintainer: KT Hobba <andy.teucher@gmail.com>
+URL: https://github.com/claudia-nikel/534_project
+BugReports: 
+Depends:
+    R (>= 3.2.0)
+License: file LICENSE
+LazyData: true
+Imports:
+    cellranger (>= 1.0.0),
+    dplyr (>= 0.4.2),
+    httr (>= 1.1.0),
+    jsonlite,
+    plotly,
+    purrr,
+    readr (>= 0.2.2),
+    stats,
+    stringr,
+    tidyr,
+    utils,
+    XML,
+    xml2
+Suggests:
+    covr,
+    ggplot2,
+    knitr,
+    testthat,
+    rmarkdown
+Remotes:
+    hadley/testthat
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
