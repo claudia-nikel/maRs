@@ -29,7 +29,7 @@ jobs:
 r_github_packages:
   - codecov/maRs
 
-script: pytest
+script: test-all.R
 
 # only report coverage after build is successful
 after_success:
