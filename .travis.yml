@@ -17,8 +17,6 @@ r_packages:
   - covr
   - devtools
  
-before_install:
- - cd maRs
 
 sudo: required
   
