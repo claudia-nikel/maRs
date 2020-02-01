@@ -7,7 +7,7 @@ Authors@R: c(
     person("KT", "Hobbs"),
     person("Shreeram", "Murali")
     )
-URL: https://github.com/claudia-nikel/534_project/tree/master
+URL: https://github.com/claudia-nikel/534_project
 BugReports: 
 Depends:
     R (>= 3.2.0)
