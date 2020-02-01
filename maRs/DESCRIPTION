@@ -1,6 +1,6 @@
 Package: maRs
 Title: NASA Mars API
-Version: 0.1
+Version: 0
 Description: Data wrangling and plotting of temperature, wind, pressure for sols.
 Authors@R: c(
     person("Claudia", "Nikel", role ="aut",
