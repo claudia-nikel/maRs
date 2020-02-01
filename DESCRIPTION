@@ -2,11 +2,7 @@ Package: maRs
 Title: NASA API Mars Weather Report
 Version: 0
 Description: Gather weekly weather reports and plot specifics from the last seven days.
-Authors: c(
-    person("Claudia", "Nikel"),
-    person("KT", "Hobbs"),
-    person("Shreeram", "Murali")
-    )
+Authors: Claudia Nikel, KT Hobbs, Shreeram Musali
 URL: https://github.com/claudia-nikel/534_project
 BugReports: 
 Depends:
