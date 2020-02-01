@@ -46,4 +46,4 @@ If the input is not within the last 7 sols, an error message will return listing
 
 `windspeed(417)`
 
-!(windspeed_example)[images/windspeed.png]
+![windspeed_example](images/windspeed.png)
