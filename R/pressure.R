@@ -93,5 +93,5 @@ pressure <- function(sol, mars.df){
   }
 }
 
-#p<-pressure(412,x)
+#p<-pressure(415, marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))
 

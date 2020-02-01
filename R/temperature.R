@@ -98,6 +98,7 @@ temperature <- function(sol, mars.df){
   }
 }
 
-#t<-temperature(413,x)
+#x<-marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
+#t<-temperature(413, marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))
 
 
