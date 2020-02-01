@@ -1,5 +1,5 @@
 language: r
-cache: maRs
+cache: packages
 warnings_are_errors: false
 
 sudo: false
