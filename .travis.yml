@@ -2,6 +2,8 @@ language: r
 cache: maRs
 warnings_are_errors: false
 
+sudo: false
+
 r:
   - oldrel
   - release
