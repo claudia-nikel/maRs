@@ -22,13 +22,11 @@ r_packages:
 os:
   - linux
   - osx
-  - windows
 
 jobs:
   allow_failures:
-    - os: 
-      - osx
-      - windows
+    - os: osx
+  
     
 #r_github_packages:
   #- codecov/534_project
