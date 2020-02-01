@@ -29,6 +29,8 @@ jobs:
 r_github_packages:
   - codecov/maRs
 
+script: pytest
+
 # only report coverage after build is successful
 after_success:
   - Rscript -e 'library(covr);codecov()'
