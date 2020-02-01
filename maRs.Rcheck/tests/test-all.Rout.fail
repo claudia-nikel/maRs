@@ -1,0 +1,243 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library("testthat")
+> test_check("maRs")
+Loading required package: maRs
+── 1. Error: data types correct (@test_marsAverage.R#5)  ───────────────────────
+could not find function "marsAverage"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsAverage\"", base::quote(marsAverage(x, graph = NULL))) at testthat/test_marsAverage.R:5
+2: eval(code, test_env)
+
+── 2. Error: correct column names (@test_marsAverage.R#12)  ────────────────────
+could not find function "marsAverage"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsAverage\"", base::quote(marsAverage(x, graph = NULL))) at testthat/test_marsAverage.R:12
+2: eval(code, test_env)
+
+── 3. Error: correct type of data in sol column (@test_marsAverage.R#17)  ──────
+could not find function "marsAverage"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsAverage\"", base::quote(marsAverage(x, graph = NULL))) at testthat/test_marsAverage.R:17
+2: eval(code, test_env)
+
+── 4. Error: output is a data frame (@test_marsAverage.R#22)  ──────────────────
+could not find function "marsAverage"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsAverage\"", base::quote(marsAverage(x, graph = NULL))) at testthat/test_marsAverage.R:22
+2: eval(code, test_env)
+
+── 5. Error: correct dataframe size (@test_marsAverage.R#27)  ──────────────────
+could not find function "marsAverage"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsAverage\"", base::quote(marsAverage(x, graph = NULL))) at testthat/test_marsAverage.R:27
+2: eval(code, test_env)
+
+── 6. Error: data types correct (@test_marsInfo.R#9)  ──────────────────────────
+could not find function "marsInfo"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsInfo\"", base::quote(marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))) at testthat/test_marsInfo.R:9
+2: eval(code, test_env)
+
+── 7. Error: correct column names (@test_marsInfo.R#16)  ───────────────────────
+could not find function "marsInfo"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsInfo\"", base::quote(marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))) at testthat/test_marsInfo.R:16
+2: eval(code, test_env)
+
+── 8. Error: correct type of data in Season column (@test_marsInfo.R#21)  ──────
+could not find function "marsInfo"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsInfo\"", base::quote(marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))) at testthat/test_marsInfo.R:21
+2: eval(code, test_env)
+
+── 9. Error: output is a data frame (@test_marsInfo.R#26)  ─────────────────────
+could not find function "marsInfo"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsInfo\"", base::quote(marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))) at testthat/test_marsInfo.R:26
+2: eval(code, test_env)
+
+── 10. Error: correct dataframe size (@test_marsInfo.R#31)  ────────────────────
+could not find function "marsInfo"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"marsInfo\"", base::quote(marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))) at testthat/test_marsInfo.R:31
+2: eval(code, test_env)
+
+── 11. Error: data types correct (@test_pressure.R#5)  ─────────────────────────
+could not find function "pressure"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"pressure\"", base::quote(pressure(413, x))) at testthat/test_pressure.R:5
+2: eval(code, test_env)
+
+── 12. Error: data types correct (@test_temperature.R#5)  ──────────────────────
+could not find function "temperature"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"temperature\"", base::quote(temperature(413, x))) at testthat/test_temperature.R:5
+2: eval(code, test_env)
+
+── 13. Error: data types correct (@test_windspeed.R#5)  ────────────────────────
+could not find function "windspeed"
+1: .handleSimpleError(function (e) 
+   {
+       handled <<- TRUE
+       test_error <<- e
+       options(expressions = expressions_opt_new)
+       on.exit(options(expressions = expressions_opt), add = TRUE)
+       e$expectation_calls <- frame_calls(11, 2)
+       test_error <<- e
+       register_expectation(e)
+       e$handled <- TRUE
+       test_error <<- e
+   }, "could not find function \"windspeed\"", base::quote(windspeed(413, x))) at testthat/test_windspeed.R:5
+2: eval(code, test_env)
+
+══ testthat results  ═══════════════════════════════════════════════════════════
+[ OK: 5 | SKIPPED: 0 | WARNINGS: 0 | FAILED: 13 ]
+1. Error: data types correct (@test_marsAverage.R#5) 
+2. Error: correct column names (@test_marsAverage.R#12) 
+3. Error: correct type of data in sol column (@test_marsAverage.R#17) 
+4. Error: output is a data frame (@test_marsAverage.R#22) 
+5. Error: correct dataframe size (@test_marsAverage.R#27) 
+6. Error: data types correct (@test_marsInfo.R#9) 
+7. Error: correct column names (@test_marsInfo.R#16) 
+8. Error: correct type of data in Season column (@test_marsInfo.R#21) 
+9. Error: output is a data frame (@test_marsInfo.R#26) 
+1. ...
+
+Error: testthat unit tests failed
+Execution halted
