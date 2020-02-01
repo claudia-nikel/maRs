@@ -98,6 +98,6 @@ temperature <- function(sol, mars.df){
   }
 }
 
-t<-temperature(413,x)
-t
+#t<-temperature(413,x)
+
 

@@ -52,8 +52,8 @@ marsAverage<-function(mars.df, graph=NULL){
 }
 
 #without graph
-s<-marsAverage(x, graph=NULL)
-s
+#s<-marsAverage(x, graph=NULL)
 
-q<-marsAverage(x, graph=TRUE)
-q
+#with graph
+#q<-marsAverage(x, graph=TRUE)
+#q
