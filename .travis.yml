@@ -23,3 +23,7 @@ after_success:
 os:
   - linux
   - osx
+
+jobs:
+  allow_failures:
+    - os: osx
