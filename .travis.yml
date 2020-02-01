@@ -1,7 +1,9 @@
-script: ./build.sh
 language: r
 cache: packages
 warnings_are_errors: true
+
+before_deploy:
+  - cd maRs
 
 
 
