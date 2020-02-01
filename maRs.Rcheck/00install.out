@@ -1,0 +1,9 @@
+* installing *source* package ‘maRs’ ...
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+Error in subset(mars.df, var == "av") : object 'x' not found
+Error: unable to load R code in package ‘maRs’
+Execution halted
+ERROR: lazy loading failed for package ‘maRs’
+* removing ‘/Users/claudianikel/Desktop/534_project/maRs.Rcheck/maRs’

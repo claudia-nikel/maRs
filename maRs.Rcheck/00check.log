@@ -1,0 +1,27 @@
+* using log directory ‘/Users/claudianikel/Desktop/534_project/maRs.Rcheck’
+* using R version 3.6.1 (2019-07-05)
+* using platform: x86_64-apple-darwin15.6.0 (64-bit)
+* using session charset: UTF-8
+* checking for file ‘maRs/DESCRIPTION’ ... OK
+* this is package ‘maRs’ version ‘1.0’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .DS_Store
+  R/.DS_Store
+  tests/.DS_Store
+  tests/testthat/.DS_Store
+  vignettes/.DS_Store
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘maRs’ can be installed ... ERROR
+Installation failed.
+See ‘/Users/claudianikel/Desktop/534_project/maRs.Rcheck/00install.out’ for details.
+* DONE
+Status: 1 ERROR, 1 NOTE
