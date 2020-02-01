@@ -28,5 +28,10 @@ test_that("correct dataframe size", {
   expect_equal(dim(s), c(7, 4))
 })
 
+test_that("first input argument is dataframe", {
+  expect_error(marsAverage(12, graph=NULL))
+})
+
+
 #to test if OK or Failed in R console:
 #test_file("test_marsAverage.R")

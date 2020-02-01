@@ -94,5 +94,5 @@ windspeed <- function(sol, mars.df){
   }
 }
 
-w<-windspeed(413,x)
+w<-windspeed(415,x)
 w
