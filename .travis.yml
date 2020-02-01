@@ -26,7 +26,9 @@ os:
 
 jobs:
   allow_failures:
-    - os: osx, windows
+    - os: 
+      - osx
+      - windows
     
 #r_github_packages:
   #- codecov/534_project
