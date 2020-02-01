@@ -17,8 +17,6 @@ r_packages:
   - covr
   - devtools
  
-
-sudo: required
   
 os:
   - linux
