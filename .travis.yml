@@ -27,12 +27,10 @@ jobs:
   allow_failures:
     - os: osx
     
-r_github_packages:
-  - codecov/534_project
-
-script: test-all.R
+#r_github_packages:
+  #- codecov/534_project
 
 # only report coverage after build is successful
-after_success:
-  - Rscript -e 'library(covr);codecov()'
-  - Rscript -e 'covr::codecov()'
+#after_success:
+  #- Rscript -e 'library(covr);codecov()'
+  #- Rscript -e 'covr::codecov()'
