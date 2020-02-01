@@ -55,7 +55,7 @@ temperature <- function(sol, mars.df){
     p <- plot_ly(
       value = sol.av,
       delta = list(reference = ref.av),
-      title = list(text = paste("Atmospheric Temperature (°C) \n for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Atmospheric Temperature (C) \n for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number+delta",
       gauge = list(
@@ -75,7 +75,7 @@ temperature <- function(sol, mars.df){
     
     p <- plot_ly(
       value = sol.av,
-      title = list(text = paste("Atmospheric Temperature (°C) \n for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Atmospheric Temperature (C) \n for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number",
       gauge = list(
