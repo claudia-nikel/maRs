@@ -10,6 +10,10 @@ Authors@R: c(
     person("Shreeram", "Musali", role = "ctb",
         email = "andy.teucher@gmail.com")
     )
+Author: Claudia Nikel [aut], 
+    KT Hobbs [cre],
+    Shreeram Musali [ctb]
+Maintainer: KT Hobba <andy.teucher@gmail.com>
 URL: https://github.com/claudia-nikel/534_project
 BugReports: 
 Depends:
