@@ -1,11 +1,10 @@
 * installing *source* package ‘maRs’ ...
 ** using staged installation
-Error : Invalid DESCRIPTION file
-
-Malformed maintainer field.
-
-See section 'The DESCRIPTION file' in the 'Writing R Extensions'
-manual.
-
-ERROR: installing package DESCRIPTION failed for package ‘maRs’
-* removing ‘/Users/claudianikel/Desktop/534_project/maRs.Rcheck/maRs’
+** help
+No man pages found in package  ‘maRs’ 
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (maRs)
