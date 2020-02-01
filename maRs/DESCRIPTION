@@ -1,15 +1,35 @@
 Package: maRs
-Version: 0.1
-Date: 2020-01-30
 Title: NASA Mars API
-Description: data wrangling and plotting of temperature, wind, pressure for sols.
-Depends: R (>= 3.1.0)
-Authors: KT Hobbs <kthobbs@mail.ubc.ca>, Claudia Nikel, Shreeram Murali
-Maintainer: KT Hobbs <kthobbs@mail.ubc.ca>
-VignetteBuilder: knitr
+Version: 0.1
+Description: Data wrangling and plotting of temperature, wind, pressure for sols.
+Authors: Claudia Nikel, KT Hobbs, Shreeram Musali
+URL: https://github.com/claudia-nikel/534_project
+BugReports: 
+Depends:
+    R (>= 3.2.0)
+License: file LICENSE
+LazyData: true
 Imports:
-	jsonlite,
-	purrr,
-	dplyr,
-	tidyr,
-	plotly
+    cellranger (>= 1.0.0),
+    dplyr (>= 0.4.2),
+    httr (>= 1.1.0),
+    jsonlite,
+    plotly,
+    purrr,
+    readr (>= 0.2.2),
+    stats,
+    stringr,
+    tidyr,
+    utils,
+    XML,
+    xml2
+Suggests:
+    covr,
+    ggplot2,
+    knitr,
+    testthat,
+    rmarkdown
+Remotes:
+    hadley/testthat
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1.9000
