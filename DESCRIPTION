@@ -1,0 +1,37 @@
+Package: maRs
+Title: Pull weather data from the last seven days
+Version: 0.2.0.9000
+Description: Interact with Google Sheets from R.
+Authors@R: c(
+    person("Jennifer", "Bryan", , "jenny@stat.ubc.ca", c("aut", "cre")),
+    person("Joanna", "Zhao", , "joanna.zhao@alumni.ubc.ca", role = "aut")
+    )
+URL: 
+BugReports: 
+Depends:
+    R (>= 3.2.0)
+License: MIT + file LICENSE
+LazyData: true
+Imports:
+    cellranger (>= 1.0.0),
+    dplyr (>= 0.4.2),
+    httr (>= 1.1.0),
+    jsonlite,
+    purrr,
+    readr (>= 0.2.2),
+    stats,
+    stringr,
+    tidyr,
+    utils,
+    XML,
+    xml2
+Suggests:
+    covr,
+    ggplot2,
+    knitr,
+    testthat,
+    rmarkdown
+Remotes:
+    hadley/testthat
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1.9000
