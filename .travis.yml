@@ -1,7 +1,8 @@
-before_script: cd maRs
+script: ./build.sh
 language: r
 cache: packages
 warnings_are_errors: true
+
 
 
 sudo: false
