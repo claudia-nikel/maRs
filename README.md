@@ -5,7 +5,7 @@
 **Contributors:** Claudia Nikel, KT Hobbs & Shreeram Murali
 
 # NASA Mars API
-To retrieve and visualize weather data from the last 7 Sols (Martian days) as recorded and updated daily by NASAs InSight Mars lander.
+To retrieve and visualize weather data from the last 7 Sols (Martian days) as recorded and updated daily by NASAs InSight Mars lander. InSight is located at Elysium Planitia, a flat surface near the equator of Mars.
 
 # Installation:
 clone repository
