@@ -37,7 +37,7 @@ r_github_packages:
 # only report coverage after build is successful
 after_success:
   - Rscript -e 'library(covr);codecov()'
-  - Rscript -e 'covr::codecov()'
+
   
  
 
