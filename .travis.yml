@@ -45,6 +45,9 @@ script:
 - R CMD build maRs
 - R CMD check maRs_1.0.tar.gz
 
+codecov:
+  token: 8b3f92b3-a82b-4b26-b8d4-acfac4a640f6
+
 
 
 
