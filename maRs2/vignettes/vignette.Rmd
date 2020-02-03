@@ -1,8 +1,0 @@
----
-title: "NASA Mars API Vignette"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{NASA Mars API Vignette}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
----
