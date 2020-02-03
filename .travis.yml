@@ -28,11 +28,27 @@ jobs:
     - os: osx
   
     
-#r_github_packages:
-  #- codecov/534_project
+r_github_packages:
+  - codecov/maRs
+  - r-lib/covr
+  
 
 
 # only report coverage after build is successful
 #after_success:
   #- Rscript -e 'library(covr);codecov()'
   #- Rscript -e 'covr::codecov()'
+  
+  
+  
+  language: r
+
+cache: packages
+
+script:
+- R CMD build .
+- R CMD check *tar.gz
+
+
+
+
