@@ -59,7 +59,7 @@ temperature <- function(sol, mars.df){
       type = "indicator",
       mode = "gauge+number+delta",
       gauge = list(
-        axis = list(range = list(NULL, 700), tickwidth = 1),
+        axis = list(range = list(-100, 100), tickwidth = 1),
         bar = list(color = "royalblue"),
         bgcolor = "white",
         steps = list(
@@ -79,7 +79,7 @@ temperature <- function(sol, mars.df){
       type = "indicator",
       mode = "gauge+number",
       gauge = list(
-        axis = list(range = list(-100, 0), tickwidth = 1),
+        axis = list(range = list(-100, 100), tickwidth = 1),
         bar = list(color = "royalblue"),
         bgcolor = "white",
         steps = list(
@@ -99,6 +99,6 @@ temperature <- function(sol, mars.df){
 }
 
 #x<-marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
-#t<-temperature(413, marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))
-
+#t<-temperature(420, marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))
+#t
 

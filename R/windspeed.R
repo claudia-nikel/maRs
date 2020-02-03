@@ -94,10 +94,7 @@ windspeed <- function(sol, mars.df){
   }
 }
 
-<<<<<<< HEAD:maRs/windspeed.R
-w <- windspeed(417)
-w
-=======
-#w<-windspeed(415,x)
 
->>>>>>> a8828b6882e1aa3855a9e089325164ca7a75bab4:R/windspeed.R
+
+#w<-windspeed(418, marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))
+#w
