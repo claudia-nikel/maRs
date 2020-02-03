@@ -32,6 +32,8 @@ in R console:
 
 `marsAverage`: returns the average temperature, windspeed, and pressure for the last 7 Sols.
 
+`marsAverage(x, graph = NULL)` takes the saved output from the marsInfo() function and outputs a summary of the week's averages for temperature, horizontal windspeed, and pressure, which can be graphed with `graph = TRUE`. 
+
 `windspeed`: retrieves the inputted Sol's horizontal wind speed (m/s) from the summary table and visualizes it as a dial. The black bar is the average windspeed for the Sol, which corresponds to the black text. The green background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
 
@@ -45,7 +47,7 @@ in R console:
 ## Summary Tables
 Input your API key generated on [NASA Open APIs](https://api.nasa.gov/?search=mars) into the function `marsInfo()`.
 
-`marsAverage()` reports only daily average information for windspeed, temperature, and pressure.
+`marsAverage()` reports only daily average information for windspeed, temperature, and pressure with the option of graphing the entire week's summary.
 
 ## Visualizations
 For windspeed, pressure, and temperature visualizations, user must input a number from the previous 7 Sols. Since the function makes use of Plotly, you must save the function as a variable.
@@ -57,7 +59,3 @@ If the input is not within the last 7 Sols, an error message will return listing
 To display the visualization, run the variable name.
 
 `w`
-
-# Output Examples
-
-![windspeed_example](images/windspeed.png) 
