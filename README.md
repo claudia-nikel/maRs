@@ -1,7 +1,7 @@
 # 534 Project
 
 [![Build Status](https://travis-ci.com/claudia-nikel/534_project.svg?branch=master)](https://travis-ci.com/claudia-nikel/534_project)
-[![codecov](https://codecov.io/gh/claudia-nikel/maRs/branch/master/graph/badge.svg)](https://codecov.io/gh/claudia-nikel/maRs)
+[![Codecov test coverage](https://codecov.io/gh/claudia-nikel/maRs/branch/master/graph/badge.svg)](https://codecov.io/gh/claudia-nikel/maRs?branch=master)
 
 **Contributors:** Claudia Nikel, KT Hobbs & Shreeram Murali
 
