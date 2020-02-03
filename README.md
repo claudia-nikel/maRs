@@ -57,4 +57,4 @@ If the input is not within the last 7 Sols, an error message will return listing
 
 
 
-![windspeed_example]('images/windspeed.png' | width=100)
+![windspeed_example](images/windspeed.png = 100x100)
