@@ -1,0 +1,12 @@
+Package: maRs
+Version: 0.1
+Date: 2020-01-30
+Title: NASA Mars API
+Description: data wrangling and plotting of temperature, wind, pressure for sols.
+Depends: R (>= 3.1.0)
+Authors: KT Hobbs <kthobbs@mail.ubc.ca>, Claudia Nikel, Shreeram Murali
+Maintainer: KT Hobbs <kthobbs@mail.ubc.ca>
+VignetteBuilder: knitr
+Imports: jsonlite, purrr, dplyr, tidyr, plotly
+NeedsCompilation: no
+Packaged: 2020-01-30 19:22:00 UTC; kt

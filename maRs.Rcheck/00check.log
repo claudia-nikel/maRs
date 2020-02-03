@@ -1,54 +1,9 @@
-* using log directory ‘/Users/claudianikel/Desktop/534_project/maRs.Rcheck’
+* using log directory ‘/Users/claudianikel/Desktop/maRs/maRs.Rcheck’
 * using R version 3.6.1 (2019-07-05)
 * using platform: x86_64-apple-darwin15.6.0 (64-bit)
 * using session charset: UTF-8
-* using option ‘--as-cran’
-* checking for file ‘maRs/DESCRIPTION’ ... OK
-* this is package ‘maRs’ version ‘1.0’
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘KT Hobba <andy.teucher@gmail.com>’
-
-New submission
-
-Non-FOSS package license (file LICENSE)
-
-Unknown, possibly mis-spelled, fields in DESCRIPTION:
-  ‘Remotes’
-
-Package has a VignetteBuilder field but no prebuilt vignette index.
-
-No package encoding and non-ASCII characters in the following R files:
-  R/temperature.R
-    58:       title = list(text = paste("Atmospheric Temperature (<c2><b0>C) \n for Sol", sol, sep = " "), font = list(size = 20)),
-    78:       title = list(text = paste("Atmospheric Temperature (<c2><b0>C) \n for Sol", sol, sep = " "), font = list(size = 20)),
-
-The build time stamp is missing.
-* checking package namespace information ... OK
-* checking package dependencies ... OK
-* checking if this is a source package ... OK
-* checking if there is a namespace ... OK
-* checking for executable files ... OK
-* checking for hidden files and directories ... NOTE
-Found the following hidden files and directories:
-  .DS_Store
-  R/.DS_Store
-  tests/.DS_Store
-  tests/testthat/.DS_Store
-  vignettes/.DS_Store
-These were most likely included in error. See section ‘Package
-structure’ in the ‘Writing R Extensions’ manual.
-
-CRAN-pack does not know about
-  .DS_Store
-  R/.DS_Store
-  tests/.DS_Store
-  tests/testthat/.DS_Store
-  vignettes/.DS_Store
-* checking for portable file names ... OK
-* checking for sufficient/correct file permissions ... OK
-* checking serialization versions ... OK
-* checking whether package ‘maRs’ can be installed ... ERROR
-Installation failed.
-See ‘/Users/claudianikel/Desktop/534_project/maRs.Rcheck/00install.out’ for details.
+* checking for file ‘maRs/DESCRIPTION’ ... ERROR
+Required fields missing or empty:
+  ‘License’ ‘Author’
 * DONE
-Status: 1 ERROR, 2 NOTEs
+Status: 1 ERROR
