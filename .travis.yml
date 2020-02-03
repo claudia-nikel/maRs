@@ -6,7 +6,9 @@ warnings_are_errors: false
 r:
   - oldrel
   - release
-  
+ 
+#new add
+env: _R_CHECK_CRAN_INCOMING_=FALSE
 
 notifications:
   email:
@@ -27,7 +29,7 @@ jobs:
   allow_failures:
     - os: osx
   
-    
+ #new add   
 r_github_packages:
   - codecov/maRs
   - r-lib/covr
@@ -40,11 +42,12 @@ after_success:
 
   
  
-
+#new add
 script:
 - R CMD build maRs
 - R CMD check maRs_1.0.tar.gz
 
+#new add
 codecov:
   token: 8b3f92b3-a82b-4b26-b8d4-acfac4a640f6
 
