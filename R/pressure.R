@@ -1,27 +1,35 @@
-####################
-# TEMPERATURE PLOT
-####################
+## NASA API Mars Weather Report-Pressure Function
+## KT Hobbs & Claudia Nikel & Shreeram Murali
 
-# plot atmospheric temp for one sol
+#-------------------------------
+#### Import libraries and data
+#-------------------------------
+
+library('jsonlite')
+library('purrr')
+library('dplyr')
+library('tidyr')
+library('plotly')
+
+#-------------------------------
+#### Description
+#-------------------------------
+
+# plot pressure for one sol
 # black bar is the average, corresponding to the black text
-# blue background is the sol's range (min and max)
+# orange background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-temperature <- function(sol){
+pressure <- function(sol, mars.df){
   
   # average
-  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$AT
+  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$PRE
   
   # max
-  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$AT
+  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$PRE
   
   # min
-  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$AT
-  
-  # convert farhenheit to celsius
-  sol.av <- (as.numeric(sol.av) - 32) * 5/9
-  sol.mx <- (as.numeric(sol.mx) - 32) * 5/9
-  sol.mn <- (as.numeric(sol.mn) - 32) * 5/9
+  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$PRE
   
   # list of sols to filter plots by
   # testing that the correct sol was chosen
@@ -32,24 +40,24 @@ temperature <- function(sol){
   listofsols
   
   
-  
   if (length(subset(mars.df$day, mars.df$day == as.numeric(sol)-1) != 0)) {
     # reference sol, the day before
     refsol <- as.character(as.numeric(sol)-1)
-    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$AT
+    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$PRE
     
     p <- plot_ly(
+      domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
       delta = list(reference = ref.av),
-      title = list(text = paste("Atmospheric Temperature (°C) \n for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number+delta",
       gauge = list(
         axis = list(range = list(NULL, 700), tickwidth = 1),
-        bar = list(color = "royalblue"),
+        bar = list(color = "#E6843E"),
         bgcolor = "white",
         steps = list(
-          list(range = c(sol.mn, sol.mx), color = "#E0E6F2")),
+          list(range = c(sol.mn, sol.mx), color = "#EEE0D6")),
         threshold = list(
           line = list(color = "black", width = 1),
           thickness = 0.75,
@@ -60,16 +68,17 @@ temperature <- function(sol){
   } else if (listofsols[1] == as.numeric(sol)) {
     
     p <- plot_ly(
+      domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
-      title = list(text = paste("Atmospheric Temperature (°C) \n for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number",
       gauge = list(
-        axis = list(range = list(-100, 0), tickwidth = 1),
-        bar = list(color = "royalblue"),
+        axis = list(range = list(NULL, 700), tickwidth = 1),
+        bar = list(color = "#E6843E"),
         bgcolor = "white",
         steps = list(
-          list(range = c(sol.mn, sol.mx), color = "#E0E6F2")),
+          list(range = c(sol.mn, sol.mx), color = "#EEE0D6")),
         threshold = list(
           line = list(color = "black", width = 1),
           thickness = 0.75,
@@ -84,6 +93,5 @@ temperature <- function(sol){
   }
 }
 
-t <- temperature(411)
-t
+#p<-pressure(415, marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"))
 

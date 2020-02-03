@@ -1,22 +1,35 @@
-####################
-# PRESSURE PLOT
-####################
+## NASA API Mars Weather Report-Windpeed Function
+## KT Hobbs & Claudia Nikel & Shreeram Murali
 
-# plot pressure for one sol
+#-------------------------------
+#### Import libraries and data
+#-------------------------------
+
+library('jsonlite')
+library('purrr')
+library('dplyr')
+library('tidyr')
+library('plotly')
+
+#-------------------------------
+#### Description
+#-------------------------------
+
+# plot windspeeds for one sol
 # black bar is the average, corresponding to the black text
-# orange background is the sol's range (min and max)
+# green background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-pressure <- function(sol){
+windspeed <- function(sol, mars.df){
   
   # average
-  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$PRE
+  sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
   
   # max
-  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$PRE
+  sol.mx <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mx')$HWS
   
   # min
-  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$PRE
+  sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$HWS
   
   # list of sols to filter plots by
   # testing that the correct sol was chosen
@@ -27,24 +40,25 @@ pressure <- function(sol){
   listofsols
   
   
+  
   if (length(subset(mars.df$day, mars.df$day == as.numeric(sol)-1) != 0)) {
     # reference sol, the day before
     refsol <- as.character(as.numeric(sol)-1)
-    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$PRE
+    ref.av <- subset(mars.df, mars.df$day == refsol & mars.df$var == 'av')$HWS
     
     p <- plot_ly(
       domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
       delta = list(reference = ref.av),
-      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Horizontal Wind Speeds (m/s) \n for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number+delta",
       gauge = list(
-        axis = list(range = list(NULL, 700), tickwidth = 1),
-        bar = list(color = "#E6843E"),
+        axis = list(range = list(NULL, 25), tickwidth = 1),
+        bar = list(color = "darkgreen"),
         bgcolor = "white",
         steps = list(
-          list(range = c(sol.mn, sol.mx), color = "#EEE0D6")),
+          list(range = c(sol.mn, sol.mx), color = "lightgreen")),
         threshold = list(
           line = list(color = "black", width = 1),
           thickness = 0.75,
@@ -57,15 +71,15 @@ pressure <- function(sol){
     p <- plot_ly(
       domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
-      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Horizontal Wind Speeds (m/s) \n for Sol", sol, sep = " "), font = list(size = 20)),
       type = "indicator",
       mode = "gauge+number",
       gauge = list(
-        axis = list(range = list(NULL, 700), tickwidth = 1),
-        bar = list(color = "#E6843E"),
+        axis = list(range = list(NULL, 25), tickwidth = 1),
+        bar = list(color = "darkgreen"),
         bgcolor = "white",
         steps = list(
-          list(range = c(sol.mn, sol.mx), color = "#EEE0D6")),
+          list(range = c(sol.mn, sol.mx), color = "lightgreen")),
         threshold = list(
           line = list(color = "black", width = 1),
           thickness = 0.75,
@@ -80,5 +94,10 @@ pressure <- function(sol){
   }
 }
 
-p <- pressure(412)
-p
+<<<<<<< HEAD:maRs/windspeed.R
+w <- windspeed(417)
+w
+=======
+#w<-windspeed(415,x)
+
+>>>>>>> a8828b6882e1aa3855a9e089325164ca7a75bab4:R/windspeed.R

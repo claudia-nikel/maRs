@@ -1,12 +1,26 @@
-## NASA API Mars Weather Report
-## KT Hobbs & Claudia Nickel & Shreeram
+## NASA API Mars Weather Report-Windpeed Function
+## KT Hobbs & Claudia Nikel & Shreeram Murali
+
+#-------------------------------
+#### Import libraries and data
+#-------------------------------
+
+library('jsonlite')
+library('purrr')
+library('dplyr')
+library('tidyr')
+library('plotly')
+
+#-------------------------------
+#### Description
+#-------------------------------
 
 # plot windspeeds for one sol
 # black bar is the average, corresponding to the black text
 # green background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-windspeed <- function(sol){
+windspeed <- function(sol, mars.df){
   
   # average
   sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
@@ -80,5 +94,10 @@ windspeed <- function(sol){
   }
 }
 
+<<<<<<< HEAD:maRs/windspeed.R
 w <- windspeed(417)
 w
+=======
+#w<-windspeed(415,x)
+
+>>>>>>> a8828b6882e1aa3855a9e089325164ca7a75bab4:R/windspeed.R

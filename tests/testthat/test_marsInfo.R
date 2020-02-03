@@ -1,5 +1,10 @@
-source("../functions/marsInfo.R") #only need if testing in this script
-library(testthat)
+context("marsInfo.R") #only need if testing in this script
+library('testthat')
+library('jsonlite')
+library('purrr')
+library('dplyr')
+library('tidyr')
+library('plotly')
 
 test_that("invalid API key", {
   expect_error(marsInfo("h"))
@@ -12,14 +17,14 @@ test_that("data types correct", {
 
 
 test_that("correct column names", {
-  x<-c("sol", "atm_temp", "horiz_windspeed", "atm_pres")
+  x<-c("day", "First_UTC", "Last_UTC", "Season", "var", "AT", "HWS", "PRE")
   y<-marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
   expect_named(y, x)
 })
 
-test_that("correct type of data in sol column", {
+test_that("correct type of data in Season column", {
   x<-marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
-  expect_equal(typeof(x$sol),'integer')
+  expect_equal(typeof(x$Season),'character')
 })
 
 test_that("output is a data frame", {
@@ -29,7 +34,7 @@ test_that("output is a data frame", {
 
 test_that("correct dataframe size", {
   x<-marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
-  expect_equal(dim(x), c(7, 4))
+  expect_equal(dim(x), c(28, 8))
 })
 
 
@@ -37,4 +42,5 @@ test_that("correct dataframe size", {
 #to test if OK or Failed in R console:
 #test_file("test_marsInfo.R")
 
-
+#library(covr)
+#report()
