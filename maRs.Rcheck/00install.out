@@ -1,0 +1,21 @@
+* installing *source* package ‘maRs’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Note: possible error in 'layout(title = "Weekly Weather Summary on Mars", ': unused arguments (title = "Weekly Weather Summary on Mars", xaxis = list(title = "Sol"), yaxis = list(title = " ")) 
+Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
+Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
+Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
+Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
+Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
+Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
+** help
+No man pages found in package  ‘maRs’ 
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (maRs)

@@ -1,33 +1,26 @@
-## NASA API Mars Weather Report
-## KT Hobbs & Claudia Nickel & Shreeram
+## NASA API Mars Weather Report-Windpeed Function
+## KT Hobbs & Claudia Nikel & Shreeram Murali
 
+#-------------------------------
+#### Import libraries and data
+#-------------------------------
 
 library('jsonlite')
 library('purrr')
 library('dplyr')
 library('tidyr')
 library('plotly')
-library('dplyr')
 
-
-api <- "hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS"
-
-
-req <- paste("https://api.nasa.gov/insight_weather/?api_key=", api, "&feedtype=json&ver=1.0", sep = "")
-mars <- fromJSON(req)
-
-mars.df <- map(mars[1:7], ~unlist(.x[1:6]) %>%
-                 bind_rows) %>%
-  bind_rows(.id = "day") %>%
-  pivot_longer(cols = grep("\\.", names(.)), names_sep = "\\.", names_to = c(".value", "var"))
-
+#-------------------------------
+#### Description
+#-------------------------------
 
 # plot windspeeds for one sol
 # black bar is the average, corresponding to the black text
 # green background is the sol's range (min and max)
 # red or green text below is relative to the previous sol's average
 
-windspeed <- function(sol){
+windspeed <- function(sol, mars.df){
   
   # average
   sol.av <- subset(mars.df, mars.df$day == sol & mars.df$var == 'av')$HWS
@@ -39,6 +32,7 @@ windspeed <- function(sol){
   sol.mn <- subset(mars.df, mars.df$day == sol & mars.df$var == 'mn')$HWS
   
   # list of sols to filter plots by
+  # testing that the correct sol was chosen
   listofsols <- list()
   for (i in 1:7) {
     listofsols[i] <- as.numeric(unique(mars.df$day))[i]
@@ -100,5 +94,5 @@ windspeed <- function(sol){
   }
 }
 
-w <- windspeed(412)
-w
+#w<-windspeed(415,x)
+

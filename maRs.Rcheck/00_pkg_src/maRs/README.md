@@ -6,7 +6,7 @@
 **Contributors:** Claudia Nikel, KT Hobbs & Shreeram Murali
 
 # NASA Mars API
-To retrieve and visualize weather data from the last 7 Sols (Martian days) as recorded and updated daily by NASA's InSight Mars lander. InSight is located at Elysium Planitia, a flat surface near the equator of Mars.
+To retrieve and visualize weather data from the last 7 Sols (Martian days) as recorded and updated daily by NASAs InSight Mars lander. InSight is located at Elysium Planitia, a flat surface near the equator of Mars.
 
 # Installation:
 clone repository
@@ -30,7 +30,6 @@ in R console:
 # Functions
 `marsInfo`: returns a summary table of weather including the Sol number, datetime stamp of first recorded sample (`First_UTC`), last recorded sample (`Last_UTC`), the current season for Mars, as well as average (`av`), sample size (`ct`), minimum (`mn`) and maximum (`mx`) recordings for temperature (`AT`), horizontal windspeed (`HWS`), and pressure (`PRE`).
 
-`marsAverage`: returns the average temperature, windspeed, and pressure for the last 7 Sols.
 
 `windspeed`: retrieves the inputted Sol's horizontal wind speed (m/s) from the summary table and visualizes it as a dial. The black bar is the average windspeed for the Sol, which corresponds to the black text. The green background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
