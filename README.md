@@ -42,19 +42,22 @@ in R console:
 
 # Input
 
-## Summary Table 
+## Summary Tables
 Input your API key generated on [NASA Open APIs](https://api.nasa.gov/?search=mars) into the function `marsInfo()`.
 
-## Visualizations
-For windspeed, pressure, and temperature visualizations, user must input a number from the previous 7 Sols .
+`marsAverage()` reports only daily average information for windspeed, temperature, and pressure.
 
-`windspeed(417)`
+## Visualizations
+For windspeed, pressure, and temperature visualizations, user must input a number from the previous 7 Sols. Since the function makes use of Plotly, you must save the function as a variable.
+
+`w <- windspeed(417)`
 
 If the input is not within the last 7 Sols, an error message will return listing valid options.
 
+To display the visualization, run the variable name.
 
-# Output Example
+`w`
 
-
+# Output Examples
 
 ![windspeed_example](images/windspeed.png) 
