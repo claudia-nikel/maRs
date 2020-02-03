@@ -52,10 +52,12 @@ Input your API key generated on [NASA Open APIs](https://api.nasa.gov/?search=ma
 ## Visualizations
 For windspeed, pressure, and temperature visualizations, user must input a number from the previous 7 Sols. Since the function makes use of Plotly, you must save the function as a variable.
 
-`w <- windspeed(417)`
+`windspeed(sol, x)` where sol is sol number in the form of an integer and x is the saved output from the `marsInfo()` function.
 
 If the input is not within the last 7 Sols, an error message will return listing valid options.
 
 To display the visualization, run the variable name.
 
 `w`
+
+For more examples, refer to our vignette.
