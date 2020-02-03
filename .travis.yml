@@ -35,19 +35,15 @@ r_github_packages:
 
 
 # only report coverage after build is successful
-#after_success:
-  #- Rscript -e 'library(covr);codecov()'
-  #- Rscript -e 'covr::codecov()'
+after_success:
+  - Rscript -e 'library(covr);codecov()'
+  - Rscript -e 'covr::codecov()'
   
-  
-  
-  language: r
-
-cache: packages
+ 
 
 script:
-- R CMD build .
-- R CMD check *tar.gz
+- R CMD build maRs
+- R CMD check maRs_0.1.tar.gz
 
 
 
