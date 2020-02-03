@@ -80,5 +80,5 @@ windspeed <- function(sol){
   }
 }
 
-w <- windspeed(412)
+w <- windspeed(417)
 w
