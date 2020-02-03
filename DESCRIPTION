@@ -38,10 +38,9 @@ Suggests:
     covr,
     ggplot2,
     knitr,
-    testthat,
+    testthat (>= 2.1.0),
     rmarkdown
 Remotes:
     hadley/testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
-
