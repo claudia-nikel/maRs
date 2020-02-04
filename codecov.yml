@@ -6,9 +6,9 @@ after_success:
 - Rscript -e 'covr::codecov()'
 
 ignore:
-  - windspeed.R
-  - temperature.R
-  - pressure.R
+  - "R/windspeed.R"
+  - "R/temperature.R"
+  - "R/pressure.R"
 
 coverage:
   status:
