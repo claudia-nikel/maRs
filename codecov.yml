@@ -5,10 +5,6 @@ cache: packages
 after_success:
 - Rscript -e 'covr::codecov()'
 
-ignore:
-  - "maRs/tests/testthat/test_windspeed.R"
-  - "maRs/tests/testthat/test_pressure.R"
-  - "maRs/tests/testthat/test_temperature.R"
   
 
 coverage:
