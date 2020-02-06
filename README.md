@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/claudia-nikel/maRs.svg?branch=master)](https://travis-ci.org/claudia-nikel/maRs)
 [![Codecov test coverage](https://codecov.io/gh/claudia-nikel/maRs/branch/master/graph/badge.svg)](https://codecov.io/gh/claudia-nikel/maRs?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
 
 **Contributors:** Claudia Nikel, KT Hobbs & Shreeram Murali
 
