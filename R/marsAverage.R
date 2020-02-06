@@ -39,8 +39,8 @@ marsAverage<-function(mars.df){
   
 }
 
-#s<-marsAverage(x)
-#s
+s<-marsAverage(x)
+s
 
 
 
