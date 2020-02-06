@@ -21,7 +21,7 @@ library('plotly')
 #where green is pressure, orange is wind speed 
 #and blue is temperature
 
-marsAverage<-function(mars.df, graph=NULL){
+marsAverage<-function(mars.df){
   
   
   #takes on subset of df with averages
@@ -36,24 +36,11 @@ marsAverage<-function(mars.df, graph=NULL){
   #returns df of weekly averages
   return(marsdata)
   
-  #checks to see of optional graph parameter is NULL
-  if (is.null(graph)){
-  
-  }
-  else {
-    #plots 3 line graphs of the temperature (blue), wind speed (orange) and atmospheric pressure (green) of mars for the last 7 sols
-    p<-plot_ly(marsdata, x=~sol, y=~atm_temp, name='Atmospheric Temperature', type='scatter', mode='lines+markers') %>%
-    add_trace(y=~horiz_windspeed, name='Horizontal Wind Speed', mode='lines+markers') %>%
-    add_trace(y=~atm_pres, name='Atmospheric Pressure', mode='lines+markers') %>%
-    layout(title = "Weekly Weather Summary on Mars", xaxis = list(title = "Sol"), yaxis = list(title = " "))
-    p
-    }
   
 }
 
-#without graph
-#s<-marsAverage(x, graph=NULL)
+#s<-marsAverage(x)
+#s
 
 
-#q<-marsAverage(x, graph=TRUE)
 

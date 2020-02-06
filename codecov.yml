@@ -5,10 +5,7 @@ cache: packages
 after_success:
 - Rscript -e 'covr::codecov()'
 
-ignore:
-  - "windspeed.R" 
-  - "temperature.R"
-  - "pressure.R" 
+  
 
 coverage:
   status:

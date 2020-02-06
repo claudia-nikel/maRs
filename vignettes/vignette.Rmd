@@ -46,7 +46,7 @@ vignette: >
 
 **Temperature**: retrieves the inputted sol's temperature (converted from Farhenheit to degrees Celsius) from the summary table and visualizes it as a dial. The black bar is the average pressure for the sol, which corresponds to the black text. The blue background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
-
+**marsMM**: retrives the inputted sol's maximum and minimum value for temperature, windspeed and pressure and displays them in plot and histogram graphs for easier interpretation.
 
 ---
 
@@ -81,6 +81,15 @@ For windspeed, pressure, and temperature visualizations, user must input a numbe
 
 If the input is not within the last 7 Sols, an error message will return listing valid options.
 
+### Below is the code for marsMM():
+
+`marsMM(func='t',x)` where function represents which phenomenon you want data about and x is the saved output from the `marsInfo()` function.
+
+use `func='t'` fot temperature.
+use `func='w'` fot windspeed.
+use `func='p'` fot pressure.
+
+
 ### Utilizing the plotting capabilities of maRs
 
 The plot function of maRs is implicit, there is no need to call the plot function explicitly. Just make use of the variable that was assigned the function output and we should be able to plot a dial with our requested data.
@@ -114,6 +123,13 @@ The plot function of maRs is implicit, there is no need to call the plot functio
 `t <- temperature(415, df)`
 
 `t`
+
+#### Applying the temperature visualization function
+`marsMM(func='t',x)`
+
+`marsMM(func='w',x)`
+
+`marsMM(func='p',x)`
 
 
 ![Temperature Example](../images/temperature.png)

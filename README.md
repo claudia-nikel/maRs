@@ -1,6 +1,6 @@
 # 534 Project
 
-[![Build Status](https://travis-ci.com/claudia-nikel/534_project.svg?branch=master)](https://travis-ci.com/claudia-nikel/534_project)
+[![Build Status](https://travis-ci.org/claudia-nikel/maRs.svg?branch=master)](https://travis-ci.org/claudia-nikel/maRs)
 [![Codecov test coverage](https://codecov.io/gh/claudia-nikel/maRs/branch/master/graph/badge.svg)](https://codecov.io/gh/claudia-nikel/maRs?branch=master)
 
 **Contributors:** Claudia Nikel, KT Hobbs & Shreeram Murali
@@ -30,9 +30,7 @@ in R console:
 # Functions
 `marsInfo`: returns a summary table of weather including the Sol number, datetime stamp of first recorded sample (`First_UTC`), last recorded sample (`Last_UTC`), the current season for Mars, as well as average (`av`), sample size (`ct`), minimum (`mn`) and maximum (`mx`) recordings for temperature (`AT`), horizontal windspeed (`HWS`), and pressure (`PRE`).
 
-`marsAverage`: returns the average temperature, windspeed, and pressure for the last 7 Sols.
-
-`marsAverage(x, graph = NULL)` takes the saved output from the marsInfo() function and outputs a summary of the week's averages for temperature, horizontal windspeed, and pressure, which can be graphed with `graph = TRUE`. 
+`marsAverage`: takes the saved output from the marsInfo() function and returns the average temperature, windspeed, and pressure for the last 7 Sols.
 
 `windspeed`: retrieves the inputted Sol's horizontal wind speed (m/s) from the summary table and visualizes it as a dial. The black bar is the average windspeed for the Sol, which corresponds to the black text. The green background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
@@ -40,6 +38,9 @@ in R console:
 `pressure`: retrieves the inputted Sol's pressure (Pascal) from the summary table and visualizes it as a dial. The black bar is the average pressure for the Sol, which corresponds to the black text. The orange background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
 `temperature`: retrieves the inputted Sol's temperature (converted from Farhenheit to degrees Celsius) from the summary table and visualizes it as a dial. The black bar is the average temperature for the Sol, which corresponds to the black text. The blue background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
+
+`marsMM`: takes the savd output from the marsInfo() function and returns plot showing maximum and minimum values of whole week along with histogram for both maximum and minimum values.
+
 
 
 # Input

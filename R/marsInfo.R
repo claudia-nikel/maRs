@@ -32,3 +32,4 @@ marsInfo<-function(APIkey){
 
 #x<-marsInfo("hecLCNM6NcwAGgGGWSW2xovr0SyYuXiOShVw6GxS")
 #x
+
