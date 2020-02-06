@@ -34,19 +34,12 @@ in R console:
 
 This package also depends on the following packages: 
 
-    library(cellranger)
-    library(dplyr)
-    library(httr)
-    library(jsonlite)
-    library(plotly)
-    library(purrr)
-    library(readr)
-    library(stats)
-    library(stringr)
-    library(tidyr)
-    library(utils)
-    library(XML)
-    library(xml2)
+    library('dplyr')
+    library('jsonlite')
+    library('httr')
+    library('purrr')
+    library('tidyr')
+    library('plotly')
    
 
 # Functions
