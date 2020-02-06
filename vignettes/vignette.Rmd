@@ -22,15 +22,44 @@ vignette: >
 
 # Installation
 
-## clone repository
+## clone repository (terminal):
 
 `git clone https://github.com/claudia-nikel/534_project/`
 
-## in command line:
 
-`R CMD build maRs`
+## in R console:
 
-`R CMD INSTALL maRs_0.1.tar.gz`
+`setwd('path-to-github-repo')`
+
+`library(devtools)`
+
+`build()`
+
+`install()` if updates are required, update all (1)
+
+`library(maRs)`
+
+
+# Software Dependencies
+
+maRs requires the following libraries:
+
+```
+    library(cellranger)
+    library(dplyr)
+    library(httr)
+    library(jsonlite)
+    library(plotly)
+    library(purrr)
+    library(readr)
+    library(stats)
+    library(stringr)
+    library(tidyr)
+    library(utils)
+    library(XML)
+    library(xml2)
+    
+```
 
 ---
 

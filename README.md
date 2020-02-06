@@ -13,13 +13,16 @@ clone repository
 
 `git clone https://github.com/claudia-nikel/534_project/`
 
-in command line:
-
-`R CMD build maRs`
-
-`R CMD INSTALL maRs_1.o.tar.gz`
 
 in R console:
+
+`setwd('path-to-github-repo')`
+
+`library(devtools)`
+
+`build()`
+
+`install()` # if updates are required, update all (1)
 
 `library(maRs)`
 
@@ -29,19 +32,20 @@ in R console:
 
 This package also depends on the following packages: 
 
-    cellranger (>= 1.0.0),
-    dplyr (>= 0.4.2),
-    httr (>= 1.1.0),
-    jsonlite,
-    plotly,
-    purrr,
-    readr (>= 0.2.2),
-    stats,
-    stringr,
-    tidyr,
-    utils,
-    XML,
-    xml2
+    library(cellranger)
+    library(dplyr)
+    library(httr)
+    library(jsonlite)
+    library(plotly)
+    library(purrr)
+    library(readr)
+    library(stats)
+    library(stringr)
+    library(tidyr)
+    library(utils)
+    library(XML)
+    library(xml2)
+   
 
 # Functions
 `marsInfo`: returns a summary table of weather including the Sol number, datetime stamp of first recorded sample (`First_UTC`), last recorded sample (`Last_UTC`), the current season for Mars, as well as average (`av`), sample size (`ct`), minimum (`mn`) and maximum (`mx`) recordings for temperature (`AT`), horizontal windspeed (`HWS`), and pressure (`PRE`).

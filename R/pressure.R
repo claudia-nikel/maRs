@@ -62,8 +62,7 @@ pressure <- function(sol, mars.df){
           line = list(color = "black", width = 1),
           thickness = 0.75,
           value = sol.av)
-      )) %>%
-      layout(margin = list(l=15,r=30))
+      ))
     
   } else if (listofsols[1] == as.numeric(sol)) {
     
@@ -84,8 +83,7 @@ pressure <- function(sol, mars.df){
           thickness = 0.75,
           value = sol.av)
       )
-    ) %>%
-      layout(margin = list(l=15,r=30))
+    ) 
     
   } else {
     listofsols <- list(as.numeric(unique(mars.df$day)))
