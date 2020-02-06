@@ -48,7 +48,7 @@ Input your API key generated on [NASA Open APIs](https://api.nasa.gov/?search=ma
 
 `marsAverage()` reports only daily average information for windspeed, temperature, and pressure with the option of graphing the entire week's summary.
 
-`marsMM`: takes the saved output from the marsInfo() function and returns plot showing maximum and minimum values of whole week along with histogram for both maximum and minimum values.
+`marsMM()` takes the saved output from the marsInfo() function and returns plot showing maximum and minimum values of whole week along with histogram for both maximum and minimum values.
 
 
 ## Visualizations
