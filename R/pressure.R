@@ -49,7 +49,7 @@ pressure <- function(sol, mars.df){
       domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
       delta = list(reference = ref.av),
-      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 16)),
       type = "indicator",
       mode = "gauge+number+delta",
       gauge = list(
@@ -70,7 +70,7 @@ pressure <- function(sol, mars.df){
     p <- plot_ly(
       domain = list(x = c(0, 1), y = c(0, 1)),
       value = sol.av,
-      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 20)),
+      title = list(text = paste("Pressure (Pa) for Sol", sol, sep = " "), font = list(size = 16)),
       type = "indicator",
       mode = "gauge+number",
       gauge = list(
