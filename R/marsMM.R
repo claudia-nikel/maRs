@@ -69,11 +69,11 @@ marsMM <- function(func,df){
   }
 }
 
-marsMM(func='t',x)
+#marsMM(func='t',x)
 
-marsMM(func='w',x)
+#marsMM(func='w',x)
 
-marsMM(func='p',x)
+#marsMM(func='p',x)
 
 
 
