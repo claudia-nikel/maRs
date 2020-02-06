@@ -124,6 +124,9 @@ The plot function of maRs is implicit, there is no need to call the plot functio
 
 `t`
 
+![Temperature Example](../images/temperature.png)
+
+
 #### Applying the temperature visualization function
 `marsMM(func='t',x)`
 
@@ -132,6 +135,6 @@ The plot function of maRs is implicit, there is no need to call the plot functio
 `marsMM(func='p',x)`
 
 
-![Temperature Example](../images/temperature.png)
+
 
 *Authors:* Claudia Nikel, KT Hobbs, Shreeram Murali
