@@ -39,6 +39,9 @@ in R console:
 
 `temperature`: retrieves the inputted Sol's temperature (converted from Farhenheit to degrees Celsius) from the summary table and visualizes it as a dial. The black bar is the average temperature for the Sol, which corresponds to the black text. The blue background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
+`marsMM`: takes the savd output from the marsInfo() function and returns plot showing maximum and minimum values of whole week along with histogram for both maximum and minimum values.
+
+
 
 # Input
 
