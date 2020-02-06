@@ -30,9 +30,7 @@ in R console:
 # Functions
 `marsInfo`: returns a summary table of weather including the Sol number, datetime stamp of first recorded sample (`First_UTC`), last recorded sample (`Last_UTC`), the current season for Mars, as well as average (`av`), sample size (`ct`), minimum (`mn`) and maximum (`mx`) recordings for temperature (`AT`), horizontal windspeed (`HWS`), and pressure (`PRE`).
 
-`marsAverage`: returns the average temperature, windspeed, and pressure for the last 7 Sols.
-
-`marsAverage(x, graph = NULL)` takes the saved output from the marsInfo() function and outputs a summary of the week's averages for temperature, horizontal windspeed, and pressure, which can be graphed with `graph = TRUE`. 
+`marsAverage`: takes the saved output from the marsInfo() function and returns the average temperature, windspeed, and pressure for the last 7 Sols.
 
 `windspeed`: retrieves the inputted Sol's horizontal wind speed (m/s) from the summary table and visualizes it as a dial. The black bar is the average windspeed for the Sol, which corresponds to the black text. The green background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
