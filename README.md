@@ -39,8 +39,6 @@ in R console:
 
 `temperature`: retrieves the inputted Sol's temperature (converted from Farhenheit to degrees Celsius) from the summary table and visualizes it as a dial. The black bar is the average temperature for the Sol, which corresponds to the black text. The blue background is the sol range (min and max), and the red or green text below is represents a decrease or increase, respectively, relative to the previous sol's average.
 
-`marsMM`: takes the savd output from the marsInfo() function and returns plot showing maximum and minimum values of whole week along with histogram for both maximum and minimum values.
-
 
 
 # Input
@@ -50,7 +48,7 @@ Input your API key generated on [NASA Open APIs](https://api.nasa.gov/?search=ma
 
 `marsAverage()` reports only daily average information for windspeed, temperature, and pressure with the option of graphing the entire week's summary.
 
-`marsMM()` retrives the inputted sol's maximum and minimum value for temperature, windspeed and pressure and displays them in plot and histogram graphs for easier interpretation.
+`marsMM`: takes the saved output from the marsInfo() function and returns plot showing maximum and minimum values of whole week along with histogram for both maximum and minimum values.
 
 
 ## Visualizations
