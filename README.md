@@ -50,6 +50,9 @@ Input your API key generated on [NASA Open APIs](https://api.nasa.gov/?search=ma
 
 `marsAverage()` reports only daily average information for windspeed, temperature, and pressure with the option of graphing the entire week's summary.
 
+`marsMM()` retrives the inputted sol's maximum and minimum value for temperature, windspeed and pressure and displays them in plot and histogram graphs for easier interpretation.
+
+
 ## Visualizations
 For windspeed, pressure, and temperature visualizations, user must input a number from the previous 7 Sols. Since the function makes use of Plotly, you must save the function as a variable.
 
