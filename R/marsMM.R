@@ -49,7 +49,7 @@ marsMM <- function(func,df){
   if (func=='w'){
     plot(listofsols,mars.max.HWS, xlab = 'Sols',ylab='Max High Windspeed for last 7 days')
     lines(listofsols,mars.max.HWS)
-    plot(listofsols,mars.min.HWS, xlab = 'Sols',ylab='Max High Windspeed for last 7 days')
+    plot(listofsols,mars.min.HWS, xlab = 'Sols',ylab='Min High Windspeed for last 7 days')
     lines(listofsols,mars.min.HWS)
     mars.max.HWS<- as.numeric(mars.max.HWS)
     mars.min.HWS<- as.numeric(mars.min.HWS)
