@@ -1,9 +1,19 @@
-* using log directory ‘/Users/kt/Documents/UBC_MDS/block4/534/Project/534_project/maRs.Rcheck’
-* using R version 3.6.2 (2019-12-12)
+* using log directory ‘/Users/claudianikel/Desktop/maRs/maRs.Rcheck’
+* using R version 3.6.1 (2019-07-05)
 * using platform: x86_64-apple-darwin15.6.0 (64-bit)
 * using session charset: UTF-8
+* using option ‘--as-cran’
 * checking for file ‘maRs/DESCRIPTION’ ... OK
 * this is package ‘maRs’ version ‘1.0’
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Claudia Nikel <claudia.nikel@gmail.com>’
+
+New submission
+
+Non-FOSS package license (file LICENSE)
+
+Unknown, possibly mis-spelled, fields in DESCRIPTION:
+  ‘Remotes’
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -16,25 +26,39 @@ Found the following hidden files and directories:
   .ipynb_checkpoints
 These were most likely included in error. See section ‘Package
 structure’ in the ‘Writing R Extensions’ manual.
+
+CRAN-pack does not know about
+  .DS_Store.orig
+  .travis.yml
+  .ipynb_checkpoints
 * checking for portable file names ... WARNING
 Found the following file with a non-portable file name:
   .ipynb_checkpoints/NASA Mars Weather Report-checkpoint.ipynb
 These are not fully portable file names.
 See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
 * checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
 * checking whether package ‘maRs’ can be installed ... WARNING
 Found the following significant warnings:
   Note: possible error in 'layout(title = "Weekly Weather Summary on Mars", ': unused arguments (title = "Weekly Weather Summary on Mars", xaxis = list(title = "Sol"), yaxis = list(title = " ")) 
   Note: possible error in 'layout(margin = list(l = 15, ': unused argument (margin = list(l = 15, r = 30)) 
-See ‘/Users/kt/Documents/UBC_MDS/block4/534/Project/534_project/maRs.Rcheck/00install.out’ for details.
+See ‘/Users/claudianikel/Desktop/maRs/maRs.Rcheck/00install.out’ for details.
 Information on the location(s) of code generating the ‘Note’s can be
 obtained by re-running with environment variable R_KEEP_PKG_SOURCE set
 to ‘yes’.
 * checking installed package size ... OK
 * checking package directory ... OK
+* checking for future file timestamps ... OK
 * checking ‘build’ directory ... OK
-* checking DESCRIPTION meta-information ... OK
-* checking top-level files ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Maintainer field differs from that derived from Authors@R
+  Maintainer: ‘Claudia Nikel <claudia.nikel@gmail.com>’
+  Authors@R:  ‘KT Hobbs <kthobbs@mail.ubc.ca>’
+
+* checking top-level files ... NOTE
+Files ‘README.md’ or ‘NEWS.md’ cannot be checked without ‘pandoc’ being installed.
+Non-standard files/directories found at top level:
+  ‘images’ ‘maRs_1.0.tar.gz’
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -45,11 +69,8 @@ to ‘yes’.
 * checking whether the package can be unloaded cleanly ... OK
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
-* checking dependencies in R code ... NOTE
-Namespaces in Imports field not imported from:
-  ‘XML’ ‘cellranger’ ‘dplyr’ ‘httr’ ‘jsonlite’ ‘plotly’ ‘purrr’ ‘readr’
-  ‘stringr’ ‘tidyr’ ‘utils’ ‘xml2’
-  All declared Imports should be used.
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... OK
 * checking S3 generic/method consistency ... OK
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
@@ -96,9 +117,7 @@ Extensions’ manual.
   Running ‘testthat.R’
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
-* checking running R code from vignettes ... NONE
-  ‘vignette.Rmd’using ‘UTF-8’... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 3 WARNINGs, 3 NOTEs
+Status: 3 WARNINGs, 5 NOTEs
