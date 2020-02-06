@@ -69,11 +69,11 @@ weeklyreport <- function(func,df){
   }
 }
 
-weeklyreport(func='t',x)
+#weeklyreport(func='t',x)
 
-weeklyreport(func='w',x)
+#weeklyreport(func='w',x)
 
-weeklyreport(func='p',x)
+#weeklyreport(func='p',x)
 
 
 
